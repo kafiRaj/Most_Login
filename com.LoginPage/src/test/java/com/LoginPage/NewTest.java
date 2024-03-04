@@ -1,6 +1,7 @@
 package com.LoginPage;
 
 import org.testng.annotations.Test;
+
 import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
@@ -56,9 +57,12 @@ public class NewTest {
 	  Thread.sleep(5000);
 	  
 	  
-	  WebElement getText = driver.findElement(By.xpath("//*[@id=\"root\"]/section/header/section/div/div/div[2]/div/h2"));
+	  WebElement actualTextField = driver.findElement(By.xpath("//h2[contains(text(), 'Integrated Digital Service Delivery Platform')]"));
 	  
-	  Assert.assertEquals(getText, "Integrated Digital Service Delivery Platform");
+	  String actualText = actualTextField.getText();
+
+	  
+	  Assert.assertEquals(actualText, "Integrated Digital Service Delivery Platform");
 	  
   }
   
