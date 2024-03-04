@@ -1,0 +1,72 @@
+package com.LoginPage;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+
+public class NewTest {
+ 
+  public static String ChromeDriverPath=".\\src\\test\\resources\\drivers\\chromedriver.exe";
+  public static  String baseUrl = "https://tr-services.most.gov.bd/en/auth/login";
+  
+  public static WebDriver driver;
+
+  
+  @BeforeMethod
+  public void beforeMethod() {
+	  
+	  System.setProperty("webdriver.chrome.driver",ChromeDriverPath);
+	  driver = new ChromeDriver();
+	  
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  driver.manage().window().maximize();
+	  
+	  driver.get(baseUrl);
+		
+	 
+  }
+  
+  
+  @Test
+  public void LoginTest() throws InterruptedException {
+	  
+	  WebElement username = driver.findElement(By.id("loginForm_username"));
+	  username.click();
+	  username.clear();
+	  username.sendKeys("admin@most.gov.bd");
+	  
+	  
+	  WebElement password = driver.findElement(By.id("loginForm_password"));
+	  username.click();
+	  password.clear();
+	  password.sendKeys("Abc123!");
+	  
+	  
+	  WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
+	  loginButton.click();
+	 
+	  Thread.sleep(5000);
+	  
+	  
+	  WebElement getText = driver.findElement(By.xpath("//*[@id=\"root\"]/section/header/section/div/div/div[2]/div/h2"));
+	  
+	  Assert.assertEquals(getText, "Integrated Digital Service Delivery Platform");
+	  
+  }
+  
+  
+
+  @AfterMethod
+  public void afterMethod() {
+	  driver.close();
+  }
+
+}
