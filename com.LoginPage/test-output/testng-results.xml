@@ -2,28 +2,52 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-04T18:18:37 BDT" name="Default suite" finished-at="2024-03-04T18:18:53 BDT" duration-ms="15347">
+  <suite started-at="2024-03-27T15:08:37 BDT" name="Default suite" finished-at="2024-03-27T15:09:10 BDT" duration-ms="32749">
     <groups>
     </groups>
-    <test started-at="2024-03-04T18:18:37 BDT" name="Default test" finished-at="2024-03-04T18:18:53 BDT" duration-ms="15347">
-      <class name="com.LoginPage.NewTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.LoginPage.NewTest@1700915]" started-at="2024-03-04T18:18:37 BDT" name="beforeMethod" finished-at="2024-03-04T18:18:44 BDT" duration-ms="6162" status="PASS">
+    <test started-at="2024-03-27T15:08:37 BDT" name="Default test" finished-at="2024-03-27T15:09:10 BDT" duration-ms="32749">
+      <class name="com.LoginPage.LoginTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.LoginPage.LoginTest@1700915]" started-at="2024-03-27T15:08:37 BDT" name="beforeMethod" finished-at="2024-03-27T15:08:49 BDT" duration-ms="11759" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="LoginTest()[pri:0, instance:com.LoginPage.NewTest@1700915]" started-at="2024-03-04T18:18:44 BDT" name="LoginTest" finished-at="2024-03-04T18:18:52 BDT" duration-ms="8749" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="LoginTest()[pri:0, instance:com.LoginPage.LoginTest@1700915]" started-at="2024-03-27T15:08:49 BDT" name="LoginTest" finished-at="2024-03-27T15:09:09 BDT" duration-ms="20368" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [Integrated Digital Service Delivery Platform] but found [[[ChromeDriver: chrome on WINDOWS (d0fa07feb3e8706073c2821c2410b45b)] -> xpath: //*[@id="root"]/section/header/section/div/div/div[2]/div/h2]]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(text(), 'Integrated Digital Service Delivery Platform')]"}
+  (Session info: chrome=123.0.6312.58)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'TVLLAP26', ip: '10.8.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kafi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51268}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2701ab9ac2950213598893000234f725
+*** Element info: {Using=xpath, value=//h2[contains(text(), 'Integrated Digital Service Delivery Platform')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Integrated Digital Service Delivery Platform] but found [[[ChromeDriver: chrome on WINDOWS (d0fa07feb3e8706073c2821c2410b45b)] -> xpath: //*[@id="root"]/section/header/section/div/div/div[2]/div/h2]]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:617)
-at com.LoginPage.NewTest.LoginTest(NewTest.java:61)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[contains(text(), 'Integrated Digital Service Delivery Platform')]"}
+  (Session info: chrome=123.0.6312.58)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'TVLLAP26', ip: '10.8.0.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\Kafi\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51268}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2701ab9ac2950213598893000234f725
+*** Element info: {Using=xpath, value=//h2[contains(text(), 'Integrated Digital Service Delivery Platform')]}
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+at com.LoginPage.LoginTest.LoginTest(NewTest.java:60)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
@@ -52,15 +76,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.LoginPage.NewTest@1700915]" started-at="2024-03-04T18:18:52 BDT" name="afterMethod" finished-at="2024-03-04T18:18:53 BDT" duration-ms="326" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.LoginPage.LoginTest@1700915]" started-at="2024-03-27T15:09:09 BDT" name="afterMethod" finished-at="2024-03-27T15:09:10 BDT" duration-ms="434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.LoginPage.NewTest -->
+      </class> <!-- com.LoginPage.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

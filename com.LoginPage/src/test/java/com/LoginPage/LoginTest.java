@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-public class NewTest {
+public class LoginTest {
  
   public static String ChromeDriverPath=".\\src\\test\\resources\\drivers\\chromedriver.exe";
   public static  String baseUrl = "https://tr-services.most.gov.bd/en/auth/login";
@@ -37,12 +37,12 @@ public class NewTest {
   
   
   @Test
-  public void LoginTest() throws InterruptedException {
+  public void LoginFormTest() throws InterruptedException {
 	  
 	  WebElement username = driver.findElement(By.id("loginForm_username"));
 	  username.click();
 	  username.clear();
-	  username.sendKeys("admin@most.gov.bd");
+	  username.sendKeys("tr-admin@most.gov.bd");
 	  
 	  
 	  WebElement password = driver.findElement(By.id("loginForm_password"));
